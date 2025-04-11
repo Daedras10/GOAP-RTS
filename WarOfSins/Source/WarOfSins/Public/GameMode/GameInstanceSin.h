@@ -6,6 +6,7 @@
 #include "Engine/GameInstance.h"
 #include "GameInstanceSin.generated.h"
 
+class UGameSettingsDataAsset;
 class UClassInfoDataAsset;
 /**
  * 
@@ -17,9 +18,11 @@ class WAROFSINS_API UGameInstanceSin : public UGameInstance
 
 
 public:
-	UClassInfoDataAsset* GetClassInfoDataAsset();
+	UClassInfoDataAsset* GetClassInfoDataAsset(); /* Could be removed since we can access it from GameSettings */
+	UGameSettingsDataAsset* GetGameSettingsDataAsset();
 
 	
 protected:
+	UPROPERTY(BlueprintReadWrite, EditAnywhere) UGameSettingsDataAsset* GameSettingsDataAsset;
 	UPROPERTY(BlueprintReadWrite, EditAnywhere) UClassInfoDataAsset* ClassInfoDataAsset;
 };

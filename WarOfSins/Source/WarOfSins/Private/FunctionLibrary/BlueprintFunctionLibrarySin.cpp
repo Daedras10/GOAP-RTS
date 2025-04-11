@@ -32,3 +32,10 @@ UClassInfoDataAsset* UBlueprintFunctionLibrarySin::GetClassInfoDataAsset(UObject
 	if (!GameInstanceSin) return nullptr;
 	return GameInstanceSin->GetClassInfoDataAsset();
 }
+
+UGameSettingsDataAsset* UBlueprintFunctionLibrarySin::GetGameSettingsDataAsset(UObject* WorldContextObject)
+{
+	auto GameInstanceSin = GetGameInstanceSin(WorldContextObject);
+	if (!GameInstanceSin) return nullptr;
+	return GameInstanceSin->GetGameSettingsDataAsset();
+}

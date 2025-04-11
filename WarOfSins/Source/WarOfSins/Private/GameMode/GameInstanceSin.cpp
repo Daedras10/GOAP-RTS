@@ -7,3 +7,8 @@ UClassInfoDataAsset* UGameInstanceSin::GetClassInfoDataAsset()
 {
 	return ClassInfoDataAsset;
 }
+
+UGameSettingsDataAsset* UGameInstanceSin::GetGameSettingsDataAsset()
+{
+	return GameSettingsDataAsset;
+}

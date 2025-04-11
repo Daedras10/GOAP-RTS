@@ -6,6 +6,7 @@
 #include "Kismet/BlueprintFunctionLibrary.h"
 #include "BlueprintFunctionLibrarySin.generated.h"
 
+class UGameSettingsDataAsset;
 class UClassInfoDataAsset;
 class UGameInstanceSin;
 /**
@@ -19,4 +20,5 @@ class WAROFSINS_API UBlueprintFunctionLibrarySin : public UBlueprintFunctionLibr
 public:
 	static UGameInstanceSin* GetGameInstanceSin(UObject* WorldContextObject);
 	static UClassInfoDataAsset* GetClassInfoDataAsset(UObject* WorldContextObject);
+	static UGameSettingsDataAsset* GetGameSettingsDataAsset(UObject* WorldContextObject);
 };
